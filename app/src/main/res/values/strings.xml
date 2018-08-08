@@ -12,6 +12,7 @@
     <string name="closeDrawer">close_drawer</string>
     <string name="tourguideinfo">www.tourguideinfo.com</string>
     <string name="other">Other</string>
+    <string name="welcome_to_chandigarh">Welcome to Chandigarh</string>
 
     <!-- Toolbar titles when navigation menu item is selected -->
     <string-array name="nav_item_activity_titles">
@@ -19,5 +20,15 @@
         <item>Settings</item>
         <item>About me</item>
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="TOURISTATTRACTIONS">TOURIST ATTRACTIONS</string>
+    <string name="RESTAURANTS">RESTAURANTS</string>
+    <string name="SHOPPINGPLACES">SHOPPING PLACES</string>
+    <string name="EVENTS">EVENTS</string>
+    <string name="POPULARPLACES">POPULAR PLACES</string>
+    <string name="BARS">BARS</string>
+    <string name="PUBLICPLACES">PUBLIC PLACES</string>
 
 </resources>

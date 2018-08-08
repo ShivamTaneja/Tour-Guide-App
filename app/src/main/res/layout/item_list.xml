@@ -2,12 +2,14 @@
 <TextView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/item_name"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="150dp"
     android:textStyle="italic"
     android:textSize="32sp"
     android:gravity="center"
-    android:textColor="#31fff1"
+    android:textColor="#ffffff"
+    android:backgroundTint="#60000000"
+    android:backgroundTintMode="src_over"
     android:background="@drawable/splash_screen1"
     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
     />
