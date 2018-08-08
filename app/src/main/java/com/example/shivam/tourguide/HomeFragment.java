@@ -2,8 +2,6 @@ package com.example.shivam.tourguide;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.DividerItemDecoration;
@@ -66,27 +64,27 @@ public class HomeFragment extends Fragment {
                 switch (position)
                 {
                     case 0:
-                        intent = new Intent(fragmentActivity,ViewPager.class);
+                        intent = new Intent(fragmentActivity,View_Pager.class);
                         intent.putExtra(getString(R.string.TOURISTATTRACTIONS),0);
                         startActivity(intent);
                         break;
                     case 1:
-                        intent = new Intent(fragmentActivity,ViewPager.class);
+                        intent = new Intent(fragmentActivity,View_Pager.class);
                         intent.putExtra(getString(R.string.RESTAURANTS),1);
                         startActivity(intent);
                         break;
                     case 2:
-                        intent = new Intent(fragmentActivity,ViewPager.class);
+                        intent = new Intent(fragmentActivity,View_Pager.class);
                         intent.putExtra(getString(R.string.SHOPPINGPLACES),2);
                         startActivity(intent);
                         break;
                     case 3:
-                        intent = new Intent(fragmentActivity,ViewPager.class);
+                        intent = new Intent(fragmentActivity,View_Pager.class);
                         intent.putExtra(getString(R.string.POPULARPLACES),3);
                         startActivity(intent);
                         break;
                     case 4:
-                        intent = new Intent(fragmentActivity,ViewPager.class);
+                        intent = new Intent(fragmentActivity,View_Pager.class);
                         intent.putExtra(getString(R.string.BARS),4);
                         startActivity(intent);
                         break;

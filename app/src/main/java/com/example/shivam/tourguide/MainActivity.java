@@ -142,7 +142,6 @@ public class MainActivity extends AppCompatActivity {
                     menuItem.setChecked(true);
                 }
                 menuItem.setChecked(true);
-
                 loadHomeFragment();
 
                 return true;
@@ -170,9 +169,5 @@ public class MainActivity extends AppCompatActivity {
         //calling sync state is necessary or else your hamburger icon wont show up
         actionBarDrawerToggle.syncState();
     }
-
 }
 
-/* issues
-1) landscape mode vale
- */
