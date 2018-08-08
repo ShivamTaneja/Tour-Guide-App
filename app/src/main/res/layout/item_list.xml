@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_name"
+    android:layout_width="wrap_content"
+    android:layout_height="150dp"
+    android:textStyle="italic"
+    android:textSize="32sp"
+    android:gravity="center"
+    android:textColor="#31fff1"
+    android:background="@drawable/splash_screen1"
+    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+    />
+
