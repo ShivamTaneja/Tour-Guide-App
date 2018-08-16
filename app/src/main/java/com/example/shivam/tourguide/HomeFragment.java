@@ -7,17 +7,14 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 public class HomeFragment extends Fragment {
 
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -28,12 +25,10 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-
-        // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_home, container, false);
         final FragmentActivity fragmentActivity = getActivity();
         mRecyclerView = view.findViewById(R.id.my_recycler_view);
-        mLayoutManager = new LinearLayoutManager(fragmentActivity);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(fragmentActivity);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setHasFixedSize(true);
 
@@ -80,12 +75,12 @@ public class HomeFragment extends Fragment {
                         break;
                     case 3:
                         intent = new Intent(fragmentActivity,View_Pager.class);
-                        intent.putExtra(getString(R.string.POPULARPLACES),3);
+                        intent.putExtra(getString(R.string.PUBLICPLACES),3);
                         startActivity(intent);
                         break;
                     case 4:
                         intent = new Intent(fragmentActivity,View_Pager.class);
-                        intent.putExtra(getString(R.string.BARS),4);
+                        intent.putExtra(getString(R.string.EVENTS),4);
                         startActivity(intent);
                         break;
                   }
@@ -96,7 +91,7 @@ public class HomeFragment extends Fragment {
 
             }
         }));
-
         return view;
     }
 }
+

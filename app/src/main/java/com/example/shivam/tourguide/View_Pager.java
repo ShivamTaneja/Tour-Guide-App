@@ -8,69 +8,103 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
+import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class View_Pager extends AppCompatActivity {
 
-    private Toolbar toolbar;
-    private TabLayout tabLayout;
-    private ViewPager viewPager;
+    private int tourist_attraction, restaurants, shopping_places, public_places, events;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_pager);
 
-        toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        viewPager = findViewById(R.id.viewpager);
+        ViewPager viewPager = findViewById(R.id.viewpager);
         setupViewPager(viewPager);
 
-        tabLayout = findViewById(R.id.tabs);
+        TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 
-        int tourist_attraction = getIntent().getIntExtra(getString(R.string.TOURISTATTRACTIONS),-1);
-        int restaurants = getIntent().getIntExtra(getString(R.string.RESTAURANTS),-1);
-        int shopping_places = getIntent().getIntExtra(getString(R.string.SHOPPINGPLACES),-1);
-        int popular_places = getIntent().getIntExtra(getString(R.string.POPULARPLACES),-1);
-        int bars = getIntent().getIntExtra(getString(R.string.BARS),-1);
+        tourist_attraction = getIntent().getIntExtra(getString(R.string.TOURISTATTRACTIONS), -1);
+        restaurants = getIntent().getIntExtra(getString(R.string.RESTAURANTS), -1);
+        shopping_places = getIntent().getIntExtra(getString(R.string.SHOPPINGPLACES), -1);
+        public_places = getIntent().getIntExtra(getString(R.string.PUBLICPLACES), -1);
+        events = getIntent().getIntExtra(getString(R.string.EVENTS), -1);
 
-        if(tourist_attraction == 0)
-        {
-            tourist_attraction = -1;
-            Log.e("shivam0","shivam0");
-        }
-        else if(restaurants == 1)
-        {
-            restaurants = -1;
-            Log.e("shivam1","shivam1");
-        }
-        else if(shopping_places == 2)
-        {
-            shopping_places = -1;
-            Log.e("shivam2","shivam2");
-        }
-        else if(popular_places == 3)
-        {
-            popular_places = -1;
-            Log.e("shivam3","shivam3");
-        }
-        else if(bars == 4)
-        {
-            bars = -1;
-            Log.e("shivam4","shivam4");
-        }
+        setupViewPager(viewPager);
     }
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new tab1(), "ONE");
-        adapter.addFragment(new tab2(), "TWO");
+
+        Bundle bundle = new Bundle();
+        tab1 tab_1 = new tab1();
+        tab2 tab_2 = new tab2();
+
+        if(tourist_attraction == 0)
+        {
+            tourist_attraction = -1;
+
+            adapter.addFragment(tab_1, getString(R.string.top_rated_places));
+            adapter.addFragment(tab_2, getString(R.string.historical_places));
+
+            bundle.putInt(getString(R.string.view_pager), 0);
+            tab_1.setArguments(bundle);
+
+            bundle.putInt(getString(R.string.view_pager), 0);
+            tab_2.setArguments(bundle);
+
+        }
+        else if(restaurants == 1)
+        {
+            restaurants = -1;
+            adapter.addFragment(tab_1, getString(R.string.five_star_rest));
+            adapter.addFragment(tab_2, getString(R.string.three_start_rest));
+
+            bundle.putInt(getString(R.string.view_pager), 1);
+            tab_1.setArguments(bundle);
+
+            bundle.putInt(getString(R.string.view_pager), 1);
+            tab_2.setArguments(bundle);
+
+        }
+        else if(shopping_places == 2)
+        {
+            shopping_places = -1;
+            adapter.addFragment(tab_1, getString(R.string.shopping_places));
+
+            bundle.putInt(getString(R.string.view_pager), 2);
+            tab_1.setArguments(bundle);
+
+        }
+        else if(public_places == 3)
+        {
+            public_places = -1;
+            adapter.addFragment(tab_1, getString(R.string.public_places));
+
+            bundle.putInt(getString(R.string.view_pager), 3);
+            tab_1.setArguments(bundle);
+        }
+        else if(events == 4)
+        {
+            events = -1;
+            adapter.addFragment(tab_1, getString(R.string.cultural_events));
+            adapter.addFragment(tab_2, getString(R.string.fun_events));
+
+            bundle.putInt(getString(R.string.view_pager), 4);
+            tab_1.setArguments(bundle);
+
+            bundle.putInt(getString(R.string.view_pager), 4);
+            tab_2.setArguments(bundle);
+        }
         viewPager.setAdapter(adapter);
     }
 
@@ -102,6 +136,17 @@ public class View_Pager extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             return mFragmentTitleList.get(position);
         }
+
+        @Override
+        public void destroyItem(ViewGroup container, int position, Object object) {
+            super.destroyItem(container, position, object);
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }
 

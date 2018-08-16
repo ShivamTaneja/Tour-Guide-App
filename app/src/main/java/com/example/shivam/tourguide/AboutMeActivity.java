@@ -16,7 +16,6 @@ public class AboutMeActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
         activityTitles = getResources().getStringArray(R.array.nav_item_activity_titles);
 
         setToolbarTitle();

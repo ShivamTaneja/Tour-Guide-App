@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
 
     private NavigationView navigationView;
     private DrawerLayout drawer;
-    private View navHeader;
     private TextView txtWebsite;
     private Toolbar toolbar;
     private static final String TAG_HOME = "home";
@@ -41,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         drawer = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
-        navHeader = navigationView.getHeaderView(0);
+        View navHeader = navigationView.getHeaderView(0);
         txtWebsite = navHeader.findViewById(R.id.website);
         activityTitles = getResources().getStringArray(R.array.nav_item_activity_titles);
 
@@ -74,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
         Runnable mPendingRunnable = new Runnable() {
             @Override
             public void run() {
-                // update the main content by replacing fragments
                 Fragment fragment = getHomeFragment();
                 FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.setCustomAnimations(android.R.anim.fade_in,
@@ -93,13 +91,9 @@ public class MainActivity extends AppCompatActivity {
     private Fragment getHomeFragment() {
         switch (navItemIndex) {
             case 0:
-                // home
-                HomeFragment homeFragment = new HomeFragment();
-                return homeFragment;
+                return new HomeFragment();
             case 1:
-                // settings fragment
-                SettingsFragment settingsFragment = new SettingsFragment();
-                return settingsFragment;
+                return new SettingsFragment();
             default:
                 return new HomeFragment();
         }
@@ -152,22 +146,23 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onDrawerClosed(View drawerView) {
-                // Code here will be triggered once the drawer closes as we dont want anything to happen so we leave this blank
                 super.onDrawerClosed(drawerView);
             }
 
             @Override
             public void onDrawerOpened(View drawerView) {
-                // Code here will be triggered once the drawer open as we dont want anything to happen so we leave this blank
                 super.onDrawerOpened(drawerView);
             }
         };
 
-        //Setting the actionbarToggle to drawer layout
         drawer.setDrawerListener(actionBarDrawerToggle);
 
-        //calling sync state is necessary or else your hamburger icon wont show up
         actionBarDrawerToggle.syncState();
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }
 

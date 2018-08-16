@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/view_container"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     >
 
     <ImageView
-        android:id="@+id/imgNavHeaderBg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:contentDescription="@null"
         android:src="@drawable/splash_screen" />
 
     <TextView

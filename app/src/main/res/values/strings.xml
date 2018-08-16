@@ -6,8 +6,6 @@
     <string name="nav_settings">Settings</string>
     <string name="nav_about_me">About me</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="openDrawer">open_drawer</string>
     <string name="closeDrawer">close_drawer</string>
     <string name="tourguideinfo">www.tourguideinfo.com</string>
@@ -21,14 +19,31 @@
         <item>About me</item>
     </string-array>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="TOURISTATTRACTIONS">TOURIST ATTRACTIONS</string>
     <string name="RESTAURANTS">RESTAURANTS</string>
     <string name="SHOPPINGPLACES">SHOPPING PLACES</string>
     <string name="EVENTS">EVENTS</string>
-    <string name="POPULARPLACES">POPULAR PLACES</string>
-    <string name="BARS">BARS</string>
     <string name="PUBLICPLACES">PUBLIC PLACES</string>
-
+    <string name="sukhna_lake_desc">SUKHNA LAKE :- This is the one of the best places in Chandigarh. Here anyone can play or can do boating or can eat. Here you can find everything for whatever you are looking for.</string>
+    <string name="rock_garden_desc">ROCK GARDEN :- The continued effort to add on to the original rock garden - showcasing the Indian culture. Visit at leisure to enjoy the full garden.</string>
+    <string name="elante_mall">ELANTE MALL :- <![CDATA[This is the best mall in punjab Himachal and J&K.it offers wide varieties of shopping option and a cool place to hang out]]></string>
+    <string name="sector17">SECTOR 17 :- This is the market place is good for branded and non branded shopping. You can get enough space for parking. You can also enjoy testy food their. Shindhi Sweet is famous for sweet in this market.</string>
+    <string name="Garden_of_fragrance">GARDEN OF FRAGMENT :- The garden is very well maintained and is ideal for the locals for morning and evening walks. During winter, you can bask in the sun but in summers avoid going in there, it could be hot and humid.</string>
+    <string name="International_dolls_museum">INTERNATIONAL DOLLS MUSEUM :- Such an amazing experiences. So many bridal dolls representationg each part of India as well as many other countries as well.must visit for children. There is an open air theatre too in which you can relax and watch performances if any in open day light</string>
+    <string name="Terraced_garden">TERRACED GARDEN :- Can visit anytime and relax. Good for morning and evening walks. Once a year flower show is organised here which is very nice.</string>
+    <string name="Government_Museum_and_Art_Galley">GOVERNMENT MUSEUM AND ART :- Government Museum and Art Gallery is must visit for art lovers. Specially for paintings and art work.</string>
+    <string name="Maya_Restaurant">"Maya Restaurant :- Multi Cuisine restaurant"</string>
+    <string name="Sukhvir">"Sukhvir Restaurant :-  Affordable priced restaurant"</string>
+    <string name="Jw_Marriot">"JW Marriot :- Best Restaurant and Hotel in the Chandigarh. Best food Available"</string>
+    <string name="Pubg_Tournament">"PUBG Tournament :- For mobile gamers on 22/Aug/18 "</string>
+    <string name="Dance_competition">"Dance Competition on 23/Aug/18"</string>
+    <string name="top_rated_places">Top Rated Places</string>
+    <string name="historical_places">Historical Places</string>
+    <string name="view_pager">view_pager</string>
+    <string name="five_star_rest">Five Star Restaurants</string>
+    <string name="three_start_rest">Three Star Restaurants</string>
+    <string name="shopping_places">Shopping Places</string>
+    <string name="public_places">Public Places</string>
+    <string name="cultural_events">Cultural Events</string>
+    <string name="fun_events">Fun Events</string>
 </resources>

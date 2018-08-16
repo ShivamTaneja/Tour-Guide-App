@@ -3,11 +3,9 @@
     <color name="colorPrimary">#f2592b1e</color>
     <color name="colorPrimaryDark">#f24d251a</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="purple">#913b94</color>
-    <color name="light_green">#8abc69</color>
-    <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
-    <color name="textColorPrimary">#FFFFFF</color>
-    <color name="windowBackground">#FFFFFF</color>
-    <color name="navigationBarColor">#000000</color>
+    <color name="light_yellow">#f7ead8</color>
+    <color name="light_pink">#ffe2cf</color>
+    <color name="light_brown">#60000000</color>
+    <color name="brown_text">#580001</color>
 </resources>

@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".AboutMeActivity" />
-        <activity android:name=".View_Pager"></activity>
+        <activity android:name=".View_Pager"/>
     </application>
 
 </manifest>
